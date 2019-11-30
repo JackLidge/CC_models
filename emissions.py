@@ -46,8 +46,8 @@ g7_list = ['United States','United Kingdom','Germany','France','Canada','Italy',
 fig, (ax1, ax2) = plt.subplots(1,2,figsize=[12,6])
 for i, val in enumerate(g7_list):
     country = country_splitter(CO2data,SocEcoData,val)
-    ax1.plot(country.index,country['co2_density'],label=val)
-    ax2.plot(country.index,country['CO2'],label=val)
+    ax1.plot(country.co2_density,label=val)
+    ax2.plot(country.CO2,label=val)
 plt.legend(bbox_to_anchor=(0.4,0.6))
 plt.savefig('G7_nations.png',dpi=300)
 plt.show()
@@ -61,8 +61,8 @@ brics_list = ['Brazil','Russian Federation','India','China','South Africa']
 fig, (ax1, ax2) = plt.subplots(1,2,figsize=[12,6])
 for i, val in enumerate(brics_list):
     country = country_splitter(CO2data,SocEcoData,val)
-    ax1.plot(country.index,country['co2_density'],label=val)
-    ax2.plot(country.index,country['CO2'],label=val)
+    ax1.plot(country.co2_density,label=val)
+    ax2.plot(country.CO2,label=val)
 plt.legend(bbox_to_anchor=(0.46,1.01))
 #plt.savefig('BRICS_nations.png',dpi=300)
 plt.show()
